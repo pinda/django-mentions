@@ -26,4 +26,4 @@ def autocomplete(request):
                     'uid': '%s:%s' % (provider.name, obj.pk),
                 })
 
-    return JsonResponse(ret)
+    return JsonResponse(ret, safe=False)
