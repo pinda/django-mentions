@@ -3,7 +3,7 @@ import json
 from django.http import JsonResponse
 
 
-from mentions.registry import providers
+from .registry import providers
 
 
 def autocomplete(request):
