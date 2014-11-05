@@ -1,6 +1,6 @@
 import json
 
-from django.http import HttpResponse
+from django.http import JsonResponse
 
 
 from .registry import providers
@@ -26,4 +26,4 @@ def autocomplete(request):
                     'uid': '%s:%s' % (provider.name, obj.pk),
                 })
 
-    return HttpResponse(json.dumps(ret), mimetype='application/json')
+    return JsonResponse(ret)
